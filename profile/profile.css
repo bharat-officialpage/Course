@@ -1,0 +1,562 @@
+:root{
+    --color:#8e44ad;
+    --red:#e74c3c;
+    --orange:#f39c12;
+    --light-color:#888;
+    --light:#eee;
+    --black:#2c3e50;
+    --white:#fff;
+    --border:.1px solid rgba(0,0,0,.2);
+ }
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 26px 30px;
+}
+.header a{
+    font-size: 23px;
+    color: #5c5353;
+    /* font-family: fantasy; */
+    cursor: pointer;
+
+}
+.header form{
+    width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* visibility: hidden; */
+}
+
+/* .formcontrol{
+    visibility: hidden;
+}
+.formcontrol.active{
+  visibility: visible;
+} */
+
+.header form input{
+    width: 100%;
+    padding: 17px 24px;
+    background: whitesmoke;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+.header form button{
+    position: relative;
+    right: 35px;
+    font-size: 19px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.60s;
+}
+.header form button:hover{
+    color: purple;
+}
+
+.header .icons{
+    font-size: 21px;
+}
+.header .icons div{
+    padding: 6px;
+    border: 1px solid #d5d3d3;
+    margin: 0px 3px;
+    background: ghostwhite;
+    color: black;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.30s;
+}
+.header .icons #search-btn{
+display: none;
+}
+
+.header .icons div:hover{
+    background-color: rgb(39, 39, 39);
+    color: white;
+}
+.header .profile{
+    position: absolute;
+    top: 100px;
+    z-index: 100;
+    right: 0;
+    padding: 18px 0px;
+    border: 1px solid gainsboro;
+    background: white;
+    text-align: center;
+    width: 329px;
+    margin-right: 31px;
+    visibility: hidden;
+    
+
+}
+.header .profile.active{
+    visibility: visible;
+}
+
+.header .profile img{
+    width: 25%;
+    object-fit: cover;
+}
+.header .profile h3{
+    font-size: 18px;
+    color: black;
+    font-family: fangsong;
+    letter-spacing: 1px;
+    padding-bottom: 0px;
+}
+.header .profile span{
+    display: block;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    font-family: fangsong;
+    padding-bottom: 13px;
+}
+.header .profile .btn1{
+    border: none;
+    border-radius: 4px;
+    display: block;
+    margin: 0px 19px;
+    background: purple;
+    color: white;
+    font-size: 19px;
+    font-family: sans-serif;
+    font-weight: 900;
+}
+.header .profile .flex{
+    padding: 22px 0px;
+    overflow: hidden;
+}
+.header .profile .flex a{
+    padding: 9px 36px;
+    margin: 0px 5px;
+    border: none;
+    color: white;
+    background: #f39c12;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 8px;
+    font-family: fangsong;
+    font-weight: 900;
+}
+/* Header-Section-End */
+
+/* Side-Navbar_section-Start */
+
+.side-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background: white;
+    border-right: 1px solid gainsboro;
+    padding-top: 38px;
+    z-index: 100;
+
+}
+body{
+    padding-left: 200px;
+}
+body.active{
+    padding-left: 0;
+}
+.side-bar.active{
+    left: -200px;
+}
+
+.side-bar #close-btn{
+    padding: 0px 10px;
+    visibility: hidden;
+}
+.side-bar #close-btn i{
+    border: none;
+    padding: 6px 9px;
+    background: #ffc1ff;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.50s;
+}
+.side-bar #close-btn i:hover{
+    background-color: black;
+    color: white;
+}
+
+.side-bar .profile img{
+    width: 25%;
+    object-fit: cover;
+}
+.side-bar .profile {
+text-align: center;
+}
+.side-bar .profile h3{
+    font-size: 18px;
+    color: black;
+    font-family: fangsong;
+    letter-spacing: 1px;
+    padding-bottom: 0px;
+}
+.side-bar .profile span{
+    display: block;
+    font-size: 16px;
+    color: black;
+    font-family: fangsong;
+    padding-bottom: 13px;
+}
+.side-bar .profile .btn1{
+
+    border: none;
+    font-family: 'FontAwesome';
+    letter-spacing: 1px;
+    border-radius: 4px;
+    padding: 9px 17px;
+    font-weight: 900;
+    background: purple;
+    color: white;
+    font-size: 14px;
+
+}
+.side-bar .navbar{
+    padding-top: 40px;
+}
+.side-bar .navbar a{
+    display: block;
+    font-size: 18px;
+    color: #837f7f;
+    font-family: sans-serif;
+    line-height: 47px;
+    margin: 10px 0px;
+    padding-left: 20px;
+}
+.side-bar .navbar a:hover{
+    background: var(--light);
+}
+.side-bar .navbar span:hover{
+  padding-left: 10px;
+}
+
+.side-bar .navbar a i{
+    color: purple;
+    padding-right: 7px;
+}
+
+
+/* Side-Navbar_section-ENd */
+
+.playlist{
+    padding: 30px;
+}
+.playlist .heading{
+    font-size: 17px;
+    font-family: 'FontAwesome';
+    letter-spacing: 2px;
+    border-bottom: 1px solid darkgray;
+    padding-bottom: 18px
+}
+.playlist .box-container {
+    border: 1px solid var(--light);
+    padding: 20px 24px;
+    background: white;
+    margin-top: 25px;
+}
+
+.playlist .box .IMAGE{
+    text-align: center;
+    font-family: 'FontAwesome';
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+.playlist .box .IMAGE span {
+    color: gray;
+    font-size: 11px;
+}
+
+.playlist .box .content{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 14px;
+    flex-wrap: wrap;
+}
+.playlist .box .content .col{
+    border: 1px solid var(--light);
+    color: var(--color);
+    padding: 10px 10px;
+    font-family: 'FontAwesome';
+    font-size: 12px;
+    letter-spacing: 1px;
+    background: var(--light);
+    margin: 12px 0px;
+}
+.playlist .box .content a{
+    color: gray;
+}
+.playlist .box .content span{
+    font-size: 15px;
+    padding-left: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+   /* Our-Courses */
+   .Our-Courses{
+    padding: 40px 40px;
+   }
+   .Our-Courses .heading{
+    font-size: 23px;
+    font-family: 'FontAwesome';
+    border-bottom: 1px solid darkgray;
+    padding: 10px 0px;
+    letter-spacing: 4px;
+}
+   .Our-Courses .box-container{
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px , 1fr));
+    /* padding-top: 36px; */
+   }
+   .Our-Courses  .box{
+    border: 1px solid var(--light);
+    width: 299px;
+    height: 442px;
+    overflow: hidden;
+    padding: 10px 8px;
+    margin: 10px 10px;
+    background: white;
+   }
+   body{
+    background: var(--light);
+   }
+   .Our-Courses  .box .content{
+    display: flex;
+    border: 1px solid var(--light);
+    width: 152px;
+    overflow: hidden;
+   }
+   .Our-Courses  .box .content .img{
+    width: 50px;
+   }
+   .Our-Courses  .box .content .img img {
+    width: 100%;
+    object-fit: cover;
+   }
+   .Our-Courses  .box .content .tittles{
+    padding-left: 15px;
+   }
+   .Our-Courses  .box .content .tittles h4{
+    padding-bottom: 4px;
+    font-family: fangsong;
+   }
+   .Our-Courses  .box .content .tittles span{
+    font-family: fangsong;
+   }
+   .Our-Courses  .box .thumb .image{
+    width: 260px;
+    overflow: hidden;
+   }
+   .Our-Courses  .box .thumb .image span{
+    border: 1px solid var(--light);
+    font-size: 13px;
+    padding: 9px;
+    font-family: 'FontAwesome';
+    letter-spacing: 1.7px;
+   }
+   .Our-Courses  .box .thumb .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   }
+
+   .Our-Courses  .box h3{
+       
+   }
+   .Our-Courses  .box a{
+
+   }
+   .Our-Courses  .box .coursename{
+    text-align: center;
+    padding-top: 3px;
+   }
+   .Our-Courses  .box .coursename h3{
+    font-size: 15px;
+    font-family: 'FontAwesome';
+    letter-spacing: 1.5px;
+    padding-top: 6px;
+    padding-bottom: 16px;
+   }
+   .Our-Courses  .box .coursename a{
+    border: none;
+    padding: 10px 71px;
+    color: var(--light);
+    background: var(--color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.70s;
+    font-family: 'FontAwesome';
+    letter-spacing: 2px;
+    font-size: 12px;
+    transition: all 0.40s;
+   }
+   .Our-Courses  .box .coursename a:hover{
+       background: var(--black);
+       color: white;
+    }
+    /* Our-Courses */
+       
+   
+
+    /* footersection */
+    .footer{
+        text-align: center;
+    border: 1px solid gainsboro;
+    position: sticky;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 29px;
+    font-size: 18px;
+    font-family: monospace;
+}
+.footer span{
+    color: var(--color);
+    font-weight: bold;
+}
+    /* footersection */
+    html::-webkit-scrollbar{
+        height: 100px ;
+        width: 10px;
+    }
+    html::-webkit-scrollbar-track{
+      background: transparent;
+    }
+    html::-webkit-scrollbar-thumb{
+     background: var(--color);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:910px){
+    .header form{
+    width: 400px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 77px;
+    width: auto;
+    visibility: hidden;
+}
+.header form.active{
+    visibility: visible;
+
+}
+
+.header form button{
+    right: 23px;
+    position: absolute;
+}
+.header .profile{
+    position: absolute;
+    top: 20%;
+}
+.header .icons #search-btn{
+display: inline-block;
+}
+.side-bar #close-btn{
+    padding: 0px 10px;
+    visibility: visible;
+}
+}
+@media(max-width:400px){
+    .header .profile{
+     width: 100%;
+     margin: 0;
+    }
+}
+@media(max-width:402px){
+    .playlist .box .content {
+        justify-content: center;
+    }
+}
+@media(max-width:900px){
+    body{
+        padding-left: 0;
+    }
+      .side-bar{
+        left: -200px;
+    }
+      .side-bar.active{
+        left: 0;
+    box-shadow: 0 0 0 100vw rgb(0 0 0 / 80%);
+    }
+}
+@media(max-width:624px){
+.quickstart .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+}
+@media(max-width:762px){
+    .playlist .box .row {
+        display: unset;
+    }
+    .playlist .box .row .image {
+        width: 100%;
+    }
+    .playlist .box .row .content {
+        padding-top: 25px;
+        padding-left: 0;
+        width: unset;
+        padding-bottom: 15px;
+    }
+    .playlist .box .content .col {
+        margin: 10px 12px;
+        text-align: center;
+    }
+}
+
+@media(max-width:854px){
+    .playlist .box .content .col {
+        margin: 10px 12px;
+        text-align: center;
+    }
+}
+
